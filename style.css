@@ -1,0 +1,149 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #001a33;
+    margin: 0;
+    padding: 0;
+  }
+
+   .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8; /* Optional: make content more readable */
+  }
+  
+  h1 {
+    margin-top: 20px;
+    color: #d3e0ef;
+  }
+  
+  .full-screen-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    box-sizing: border-box;
+  }
+  
+  .left-half, .right-half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .control-panel {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(204, 204, 255, 0.2); /* Light purple with transparency */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Optional: semi-transparent border */
+    border-radius: 12px;
+    padding: 75px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(5px); /* Optional: adds a frosted glass effect */
+  }
+  
+
+  .control-panel button {
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #2c3e50;
+  }
+  
+  .control-panel span {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .container {
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.2); /* White with transparency */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(5px); /* Optional */
+  }
+  
+  
+  .game-board {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .card {
+    background: #2c3e50;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .card .front,
+  .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+  }
+  
+  .card .front {
+    background: #2c3e50;
+  }
+  
+  .card .back {
+    background: #003333;
+    transform: rotateY(180deg);
+  }
+  
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
